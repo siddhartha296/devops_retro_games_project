@@ -1,0 +1,166 @@
+.leaderboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.game-selector {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game-selector label {
+  font-size: 0.9rem;
+  color: #ffd700;
+}
+
+.game-select {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: 2px solid #ffd700;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 200px;
+}
+
+.game-select:focus {
+  outline: none;
+  border-color: #ffed4e;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.game-select option {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.leaderboard-table {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-x: auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead tr {
+  border-bottom: 2px solid #ffd700;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #ffd700;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+tbody tr:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+tbody tr.rank-1 {
+  background: rgba(255, 215, 0, 0.15);
+}
+
+tbody tr.rank-2 {
+  background: rgba(192, 192, 192, 0.1);
+}
+
+tbody tr.rank-3 {
+  background: rgba(205, 127, 50, 0.1);
+}
+
+td {
+  padding: 1.2rem 1rem;
+  font-size: 0.85rem;
+}
+
+.rank-cell {
+  font-weight: bold;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medal {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.player-cell {
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-cell {
+  color: #0f0;
+  font-weight: bold;
+  text-align: right;
+}
+
+.leaderboard-info {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.leaderboard-info p {
+  font-size: 0.8rem;
+  color: #ffd700;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-container {
+    padding: 1rem;
+  }
+
+  .leaderboard-table {
+    padding: 1rem;
+  }
+
+  th, td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .medal {
+    font-size: 1.2rem;
+  }
+
+  .game-selector {
+    flex-direction: column;
+  }
+
+  .game-select {
+    width: 100%;
+  }
+}
